@@ -5,7 +5,7 @@ export const Dashboard: React.FC = () => {
   return (
     <Layout>
       <PageContainer title="Dashboard">
-        <div>sasdasdasd</div>
+        <div>mới học code mà giỏi vl</div>
       </PageContainer>
     </Layout>
   );
