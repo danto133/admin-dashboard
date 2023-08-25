@@ -1,12 +1,14 @@
 import {
-  Button,
   Paper,
+  TextInput,
   PasswordInput,
-  Space,
-  TextInput
+  Group,
+  Checkbox,
+  Anchor,
+  Button,
 } from "@mantine/core";
 
-const RegisterForm: React.FC = () => {
+export const LoginForm: React.FC = () => {
   return (
     <Paper withBorder shadow="md" p={30} mt={30} radius="md">
       <TextInput label="Email" placeholder="test@example.com" required />
@@ -16,12 +18,15 @@ const RegisterForm: React.FC = () => {
         required
         mt="md"
       />
-      <Space h="md" />
-      <Button fullWidth mt="xl">
-        Sign Up
+      <Group position="apart" mt="md">
+        <Checkbox label="Remember me" />
+        <Anchor size="sm" href="#">
+          Forgot Password?
+        </Anchor>
+      </Group>
+      <Button fullWidth mt="xl" onClick={() => alert("Success")}>
+        Sign In
       </Button>
     </Paper>
   );
 };
-
-export default RegisterForm;

@@ -7,22 +7,8 @@ import {
   ColorSchemeProvider,
   MantineProvider,
 } from "@mantine/core";
-import Login from "./features/Login";
-import Register from "./features/Register";
-
-const path = {
-  dashboard: "/",
-  login: "/login",
-  register: "/register",
-};
-
-const Dashboard: React.FC = () => {
-  return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
-  );
-};
+import { Login, Register, Dashboard } from "./features";
+import { paths } from "./utils/paths";
 
 const App: React.FC = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
@@ -41,8 +27,8 @@ const App: React.FC = () => {
         <BrowserRouter>
           <Routes>
             <Route index element={<Dashboard />} />
-            <Route path={path.login} element={<Login />} />
-            <Route path={path.register} element={<Register />} />
+            <Route path={paths.login} element={<Login />} />
+            <Route path={paths.register} element={<Register />} />
           </Routes>
         </BrowserRouter>
       </MantineProvider>

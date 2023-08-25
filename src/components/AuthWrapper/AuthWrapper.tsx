@@ -1,12 +1,12 @@
 import { Center, Container, Title } from "@mantine/core";
 import React, { PropsWithChildren } from "react";
 
-interface Props {
+interface AuthWrapperProps {
   title: string;
   description?: React.ReactNode;
 }
 
-const AuthWrapper: React.FC<PropsWithChildren<Props>> = ({
+export const AuthWrapper: React.FC<PropsWithChildren<AuthWrapperProps>> = ({
   title,
   description,
   children,
@@ -38,5 +38,3 @@ const AuthWrapper: React.FC<PropsWithChildren<Props>> = ({
     </Center>
   );
 };
-
-export default AuthWrapper;

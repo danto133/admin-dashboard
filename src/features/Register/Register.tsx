@@ -1,10 +1,9 @@
 import { Anchor, Text } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthWrapper from "../../components/AuthWrapper";
-import RegisterForm from "../../components/RegisterForm";
+import { AuthWrapper, RegisterForm } from "../../components";
 
-const SignIn: React.FC = () => {
+export const Register: React.FC = () => {
   return (
     <AuthWrapper
       title="Admin"
@@ -22,5 +21,3 @@ const SignIn: React.FC = () => {
     </AuthWrapper>
   );
 };
-
-export default SignIn;
